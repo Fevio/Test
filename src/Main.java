@@ -30,13 +30,17 @@ public class Main extends Application {
                 griglia.add(imageView, i, j);
             }
         }
-        ColumnConstraints col = new ColumnConstraints();
-        col.setPercentWidth(25);
+        ColumnConstraints col0 = new ColumnConstraints();
+        col0.setHgrow(Priority.ALWAYS);
+        ColumnConstraints col1 = new ColumnConstraints();
+        col1.setHgrow(Priority.ALWAYS);
         ColumnConstraints col2 = new ColumnConstraints();
-        col.setPercentWidth(25);
+        col2.setHgrow(Priority.ALWAYS);
         ColumnConstraints col3 = new ColumnConstraints();
-        col.setPercentWidth(25);
-        griglia.getColumnConstraints().addAll(col, col2, col3);
+        col3.setHgrow(Priority.ALWAYS);
+        ColumnConstraints col4 = new ColumnConstraints();
+        col4.setHgrow(Priority.ALWAYS);
+        griglia.getColumnConstraints().addAll(col0, col1, col2, col3, col4);
 
         return griglia;
     }
@@ -46,12 +50,13 @@ public class Main extends Application {
 
 
         GridPane grid = creaGriglia(5, 5);
+        grid.setPrefSize(300, 300);
 
         //griglia.setAlignment(Pos.CENTER);
         //griglia.getTransforms().add(new Rotate(30, 30, 60)); //
 
 
-        Scene scene = new Scene(grid, 600, 400);
+        Scene scene = new Scene(grid, 400, 400);
 
 
         stage.setScene(scene);
