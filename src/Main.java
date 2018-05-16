@@ -12,6 +12,7 @@ public class Main extends Application {
 
     public GridPane creaGriglia(int column, int row) {
         GridPane griglia = new GridPane();
+	Image image = new Image("http://goo.gl/kYEQl");
 
         for (int a = 0; a < column; a++) {
             griglia.addColumn(column);
@@ -24,7 +25,6 @@ public class Main extends Application {
         for (int i = 0; i < column; i++) {
             for (int j = 0; j < row; j++) {
 
-                Image image = new Image("http://goo.gl/kYEQl");
                 ImageView imageView = new ImageView();
                 imageView.setImage(image);
                 griglia.add(imageView, i, j);
